@@ -1,0 +1,49 @@
+1670260878879	geckodriver	INFO	Listening on 127.0.0.1:64471
+1670260881931	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64472" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofilejWwOlY"
+1670260882118	Marionette	INFO	Marionette enabled
+1670260882121	Marionette	INFO	Listening on port 64486
+Read port: 64486
+WebDriver BiDi listening on ws://127.0.0.1:64472
+1670260882196	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofilejWwOlY\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:64472/devtools/browser/f65cfd7c-3868-4af4-9233-549e48e9001c
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript error: https://cidi.test.cba.gov.ar/bundles/bootstrap?v=bFXtFHUypKR4y4fCzyOUswIkXm9dL9kCDQ_PgUCtg2E1, line 1: TypeError: r[0] is undefined
+1670260894301	Marionette	INFO	Stopped listening on port 64486
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1670261206556	geckodriver	INFO	Listening on 127.0.0.1:64900
+1670261209617	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64901" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileoRdYgH"
+1670261209802	Marionette	INFO	Marionette enabled
+1670261209805	Marionette	INFO	Listening on port 64915
+Read port: 64915
+WebDriver BiDi listening on ws://127.0.0.1:64901
+1670261209883	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileoRdYgH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:64901/devtools/browser/b0b91755-3cee-4a4e-820e-7e7dc14822c0
+JavaScript error: https://cidi.test.cba.gov.ar/bundles/bootstrap?v=bFXtFHUypKR4y4fCzyOUswIkXm9dL9kCDQ_PgUCtg2E1, line 1: TypeError: r[0] is undefined
+1670261619456	Marionette	INFO	Stopped listening on port 64915
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "65348" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileaViiYX"
+1670261539748	Marionette	INFO	Marionette enabled
+1670261539751	Marionette	INFO	Listening on port 65361
+Read port: 65361
+WebDriver BiDi listening on ws://127.0.0.1:65348
+1670261539835	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileaViiYX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:65348/devtools/browser/16e885f5-e393-4b84-b427-9cca18b87c66
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript error: https://cidi.test.cba.gov.ar/bundles/bootstrap?v=bFXtFHUypKR4y4fCzyOUswIkXm9dL9kCDQ_PgUCtg2E1, line 1: TypeError: r[0] is undefined
+1670261546080	Marionette	INFO	Stopped listening on port 65361
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1670261628063	geckodriver	INFO	Listening on 127.0.0.1:65532
+1670261631107	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65533" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileWyAc8j"
+1670261631289	Marionette	INFO	Marionette enabled
+1670261631291	Marionette	INFO	Listening on port 49166
+Read port: 49166
+WebDriver BiDi listening on ws://127.0.0.1:65533
+1670261631363	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileWyAc8j\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:65533/devtools/browser/b612d95c-e0bd-48bb-8adc-b207f017ed3f
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+1670261636042	Marionette	INFO	Stopped listening on port 49166
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
