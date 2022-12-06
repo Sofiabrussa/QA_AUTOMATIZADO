@@ -47,3 +47,40 @@ DevTools listening on ws://127.0.0.1:65533/devtools/browser/b612d95c-e0bd-48bb-8
 JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
 1670261636042	Marionette	INFO	Stopped listening on port 49166
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1670337636453	geckodriver	INFO	Listening on 127.0.0.1:50730
+1670337639505	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50731" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileKrPUj0"
+1670337639726	Marionette	INFO	Marionette enabled
+1670337639730	Marionette	INFO	Listening on port 50746
+WebDriver BiDi listening on ws://127.0.0.1:50731
+Read port: 50746
+1670337639952	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileKrPUj0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50731/devtools/browser/b34cf9ed-3599-4010-8235-c92f548ce12b
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+1670337642461	Marionette	INFO	Stopped listening on port 50746
+1670337666542	geckodriver	INFO	Listening on 127.0.0.1:50831
+1670337669585	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50832" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofilezION42"
+1670337669763	Marionette	INFO	Marionette enabled
+1670337669766	Marionette	INFO	Listening on port 50847
+Read port: 50847
+WebDriver BiDi listening on ws://127.0.0.1:50832
+1670337669838	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofilezION42\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50832/devtools/browser/c46777b4-ab02-4854-8fc4-8d28d3526b29
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript error: https://cidi.test.cba.gov.ar/bundles/bootstrap?v=bFXtFHUypKR4y4fCzyOUswIkXm9dL9kCDQ_PgUCtg2E1, line 1: TypeError: r[0] is undefined
+1670337677242	Marionette	INFO	Stopped listening on port 50847
+1670337734474	geckodriver	INFO	Listening on 127.0.0.1:50957
+1670337737541	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50958" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofile1EJwk6"
+1670337737717	Marionette	INFO	Marionette enabled
+1670337737720	Marionette	INFO	Listening on port 50969
+Read port: 50969
+WebDriver BiDi listening on ws://127.0.0.1:50958
+1670337737804	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofile1EJwk6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50958/devtools/browser/9cb52411-549f-41bf-ab58-cb25e808d505
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+1670337740268	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1670337745788	Marionette	INFO	Stopped listening on port 50969

@@ -15,7 +15,6 @@ class Inicializar():
     
     nave = u"Firefox"
     URL = "https://siged.test.cba.gov.ar/"
-    usuario = "27433708038"
-    contra = "Qyxjooi6"
+
     
     
