@@ -84,3 +84,127 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
 1670337740268	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
 1670337745788	Marionette	INFO	Stopped listening on port 50969
+1670338666000	geckodriver	INFO	Listening on 127.0.0.1:51916
+1670338669051	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51917" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofile8F418s"
+1670338669234	Marionette	INFO	Marionette enabled
+1670338669237	Marionette	INFO	Listening on port 51930
+Read port: 51930
+WebDriver BiDi listening on ws://127.0.0.1:51917
+1670338669309	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofile8F418s\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51917/devtools/browser/2b4a16c6-855d-4212-97f3-b0163c45e79b
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+1670338671422	Marionette	INFO	Stopped listening on port 51930
+1670338814069	geckodriver	INFO	Listening on 127.0.0.1:52124
+1670338817134	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52125" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofiletWBURm"
+1670338817319	Marionette	INFO	Marionette enabled
+1670338817322	Marionette	INFO	Listening on port 52136
+Read port: 52136
+WebDriver BiDi listening on ws://127.0.0.1:52125
+1670338817393	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofiletWBURm\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52125/devtools/browser/70dd0b12-a7b6-4143-9450-a7cc48940841
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript error: https://cidi.test.cba.gov.ar/bundles/bootstrap?v=bFXtFHUypKR4y4fCzyOUswIkXm9dL9kCDQ_PgUCtg2E1, line 1: TypeError: r[0] is undefined
+1670338824804	Marionette	INFO	Stopped listening on port 52136
+1670339240539	geckodriver	INFO	Listening on 127.0.0.1:52671
+1670339243587	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52672" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofilehiKWs9"
+1670339243770	Marionette	INFO	Marionette enabled
+1670339243773	Marionette	INFO	Listening on port 52681
+Read port: 52681
+WebDriver BiDi listening on ws://127.0.0.1:52672
+1670339243851	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofilehiKWs9\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52672/devtools/browser/f4c54954-7e84-4c27-b38d-8f29f2f50f21
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+1670339247218	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://cidi.test.cba.gov.ar/bundles/bootstrap?v=bFXtFHUypKR4y4fCzyOUswIkXm9dL9kCDQ_PgUCtg2E1, line 1: TypeError: r[0] is undefined
+1670339252550	Marionette	INFO	Stopped listening on port 52681
+[Parent 19300, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:746
+[Parent 19300, IPC I/O Parent] WARNING: DuplicateHandle failed for handle 0 in TransferHandles: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_win.cc:746
+1670339274697	geckodriver	INFO	Listening on 127.0.0.1:52761
+1670339277766	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52762" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofilenxfSVP"
+1670339277956	Marionette	INFO	Marionette enabled
+1670339277959	Marionette	INFO	Listening on port 52775
+Read port: 52775
+WebDriver BiDi listening on ws://127.0.0.1:52762
+1670339278032	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofilenxfSVP\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52762/devtools/browser/1314728e-846c-4562-ad6e-e979916edff5
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+1670339280674	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1670339282829	Marionette	INFO	Stopped listening on port 52775
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1670339571824	geckodriver	INFO	Listening on 127.0.0.1:53241
+1670339574872	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53242" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofile13EEe7"
+1670339575053	Marionette	INFO	Marionette enabled
+1670339575056	Marionette	INFO	Listening on port 53258
+Read port: 53258
+WebDriver BiDi listening on ws://127.0.0.1:53242
+1670339575129	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofile13EEe7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53242/devtools/browser/6f8beb5f-1591-4ace-b4e0-ca96af5a36d9
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+1670339577415	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1670339577902	Marionette	INFO	Stopped listening on port 53258
+1670339602777	geckodriver	INFO	Listening on 127.0.0.1:53354
+1670339605847	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53355" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofilej9GVou"
+1670339606028	Marionette	INFO	Marionette enabled
+1670339606031	Marionette	INFO	Listening on port 53371
+Read port: 53371
+WebDriver BiDi listening on ws://127.0.0.1:53355
+1670339606103	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofilej9GVou\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53355/devtools/browser/7b7b9b71-f122-4619-b2dc-d3112e949160
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+1670339610132	Marionette	INFO	Stopped listening on port 53371
+1670339720768	geckodriver	INFO	Listening on 127.0.0.1:53592
+1670339723840	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53593" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileaRhVzl"
+1670339724024	Marionette	INFO	Marionette enabled
+1670339724026	Marionette	INFO	Listening on port 53608
+Read port: 53608
+WebDriver BiDi listening on ws://127.0.0.1:53593
+1670339724096	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileaRhVzl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53593/devtools/browser/7f22a9f6-b20e-4ec5-8815-8dec48d86171
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+1670339727011	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1670339727472	Marionette	INFO	Stopped listening on port 53608
+1670339785204	geckodriver	INFO	Listening on 127.0.0.1:53754
+1670339788261	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53755" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileJydsMH"
+1670339788438	Marionette	INFO	Marionette enabled
+1670339788440	Marionette	INFO	Listening on port 53765
+Read port: 53765
+WebDriver BiDi listening on ws://127.0.0.1:53755
+1670339788512	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileJydsMH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53755/devtools/browser/c0a0a3c7-659e-498d-811e-4947bd7e7213
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+1670339790984	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1670339791419	Marionette	INFO	Stopped listening on port 53765
+1670339813794	geckodriver	INFO	Listening on 127.0.0.1:53849
+1670339816839	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53850" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileSy96w9"
+1670339817025	Marionette	INFO	Marionette enabled
+1670339817027	Marionette	INFO	Listening on port 53862
+Read port: 53862
+WebDriver BiDi listening on ws://127.0.0.1:53850
+1670339817101	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Usuario\\AppData\\Local\\Temp\\rust_mozprofileSy96w9\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53850/devtools/browser/83e2abd9-f11e-4a0c-839a-b95a286b20f1
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cidi.test.cba.gov.ar."
+1670339819694	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1670339825158	Marionette	INFO	Stopped listening on port 53862

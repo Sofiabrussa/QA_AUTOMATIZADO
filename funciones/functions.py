@@ -1,6 +1,10 @@
 from Estructura.funciones.inicializar import Inicializar 
 from selenium import webdriver
 from webdriver_manager.firefox import GeckoDriverManager
+from Estructura.pages.variables_Siged import Variables as var
+from selenium.webdriver.common.by import By
+
+
 
 
 class Functions(Inicializar):    
@@ -26,4 +30,16 @@ class Functions(Inicializar):
         self.driver.quit()
         
 
-            
+##############################################################################
+
+    def xpath_elemento(self, XPATH):
+        element = self.driver.find_element(By.XPATH, XPATH)
+        return element
+    
+
+    
+
+
+
+
+         
