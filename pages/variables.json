@@ -1,0 +1,14 @@
+
+{ 
+	"Tramites":{
+	"GetFieldBy": "Xpath",
+	"ValueToFind": "/html/body/app-root/div/div[1]/app-layout/div/app-header/div/app-nav/div/button[1]"
+	  },
+	  
+	"Consulta": {
+	"GetFieldBy": "Xpath",
+	"ValueToFind": "/html/body/div/div[2]/div/div/div/button[1]"  	  
+	}
+
+}
+

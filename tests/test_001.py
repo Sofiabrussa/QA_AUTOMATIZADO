@@ -15,11 +15,23 @@ class test_001(Selenium, unittest.TestCase):
         Selenium.xpath_elemento(self, var.txt_cuil).send_keys(var.usuario)
         Selenium.xpath_elemento(self, var.txt_contra).send_keys(var.contra)
         Selenium.xpath_elemento(self, var.boton_ingresar).click()
-        time.sleep(5)
+        time.sleep(3)
         
-        #Controlar ingreso al sistema correcto
-        assert Selenium.xpath_elemento(self, var.titulo).text == "SAS"
-        print(Selenium.xpath_elemento(self, var.titulo).text)
+        #BANDEJA DE CONSULTA 
+        time.sleep(3)
+        Selenium.xpath_elemento(self, var.tramites).click()
+        Selenium.xpath_elemento(self, var.consulta).click()
+        Selenium.xpath_elemento(self, var.filtro_tramite).send_keys("3379")
+        Selenium.action_chains(self, var.boton_consultar)
+        time.sleep(5)
+    
+    
+        #INICIAR UN TRAMITE PERSONA DOCUMENTADA
+        Selenium.esperar_elemento(self, var.nuevo_tramite)
+        time.sleep(3)
+       
+        
+        
     
     def tearDown(self):
         Selenium.tearDown(self)

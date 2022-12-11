@@ -6,7 +6,8 @@ class Inicializar():
     DateFormat = "%d/%m/%Y"
 
     # JsonData
-    vari = basedir + u"/pages"
+    vari = basedir + u"\pages"
+    json = basedir + u"\pages"
     
     enviroment = "Test" #en que ambiente se esta probando 
     
