@@ -8,7 +8,14 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from selenium.common.exceptions import TimeoutException, NoSuchElementException,\
+    NoAlertPresentException, NoSuchWindowException
+from selenium.webdriver.support.ui import Select
+from gettext import find
+from _pytest.python import Function
+from Estructura.funciones import inicializar
+from pip._vendor.distlib.locators import Locator
+from pickle import TRUE
 
 
 
@@ -76,10 +83,178 @@ class Functions(Inicializar):
         action.move_to_element(self.localizador).click().perform()
 
 
+###############################################################################
+#########################SELECT################################################
+
+    def select(self, XPATH):
+        select = Select(self.driver.find_element(By.XPATH, XPATH))
+        return select
         
+
+###############################################################################
+###########################IFRAME##############################################
+
+
+    def switch_to_iframe(self, locator):
+        iframe = self.driver.find_element(By.XPATH, locator)
+        self.driver.switch_to.frame(iframe)
+        
+
+###############################################################################
+########################SELECT BY TEXT#########################################
+
+    def select_by_text(self, xpath, text):
+        get_xpath=Functions.select(self, xpath)
+        get_xpath.select_by_visible_text(text)
+
+
+###############################################################################
+########################NEW_VENTANA###########################################
+
+    def new_ventana(self, ventana="new_ventana"):
+        new_window = self.driver.current_window_handle
+        self.ventanas[ventana] = new_window
+        self.driver.switch_to.window(self.ventanas[ventana])
+        self.driver.maximize_window()
+        print(self.ventanas)
+        print("Estas en" + ventana + ":" + self.ventanas[ventana])
+        
+    def new_window(self, URL): #Se abre pestaña nueva con javascript
+        self.driver.execute_script(f"window.open('{URL}','_blank');")
+        Functions.page_has_loaded(self)
+        
+
+#################################################################################
+#############################SEND SPECIFIC KEYS###########################################
+
+    def send_specific_keys(self, element, key):
+        if key == "Enter":
+            Functions.esperar_elemento(self, element).send_keys(key.ENTER)
+        if key == "Tab":
+            Functions.esperar_elemento(self, element).send_keys(key.TAB)
+        if key == "Space":
+            Functions.esperar_elemento(self, element).send_keys(key.SPACE)
+        time.sleep(5)
+            
+##################################################################################
+################################SEND KEYS#########################################            
+            
+    def send_keys(self, element, text):
+        self.driver.find_element(By.XPATH, element).send_keys(text)
     
     
+##################################################################################
+#################################MANEJO VENTANAS##################################
+  
+    
+    def page_has_loaded(self):
+        driver = self.driver
+        print("Checking if {} page is loaded".format(self.driver.current_url))#verifica url
+        WebDriverWait(driver, 20).until(lambda driver: driver.execute_script('return document.readyState') == 'complete')
+        print("Pagina cargada")          
+    
+    
+    def switch_to_ventana(self, ventana):
+        if ventana in self.ventanas: #si la ventana existe, salata aca
+            time.sleep(5)
+            self.driver.switch_to.window(self.ventanas[ventana])
+            Functions.page_has_loaded(self)
+            print("Volviendo a" + ventana + ":" + self.ventanas[ventana])
+        
+        else: #si la venatana no existe, la agrega al diccionario y hace salto 
+            time.sleep(10)
+            self.nwindows = len(self.driver.window_handles) - 1
+            self.ventanas[ventana] = self.driver.window_handles[int(self.nwindows)]
+            self.driver.SWITCH_TO_WINDOW(self.ventanas[ventana])
+            self.driver.maximize_window()
+            print(self.ventanas)
+            print("Estas en " + ventana + ":" + self.ventanas[ventana])
+            Functions.page_has_loaded
+    
+    
+###################################################################################################
+###########################################JAVASCRIPT CLICK########################################
+
+    def js_clic(self, locator, MyTextElement=None):
+        Functions.esperar_elemento(self, locator, MyTextElement)
+        
+        try:
+            if MyTextElement is not None:
+                self.locator = self.locator.format(MyTextElement)
+                print(self.locator)
+            
+                localizador = self.driver.find_element(By.XPATH, locator)
+                self.driver.execute_script("arguments[0].click();", localizador)
+                print(u"Se hizo click en:" + locator)
+                return True
+        
+        except TimeoutException:
+            print(u"js_click : No presente" + locator)
+            Functions.tearDown(self)
+            
+            
+####################################################################################################
+##########################################SCROLL####################################################
+
+    def scroll_to(self, locator):
+        
+        try:
+            localizador = self.driver.find_element(By.XPATH, locator)
+            self.driver.execute_script("arguments[0].scrollIntoView();", localizador)
+            print(u"scroll_to: " + locator)
+            return True
+        
+        
+        except TimeoutException:
+            print(u"Scroll_to : No se encontro")
+            Functions.tearDown(self)
+    
+
+####################################################################################################
+########################################ESPERAR#####################################################
+
+    def esperar(self, timeLoad=8):
+        print("Esperar: Inicia("+str(timeLoad)+")")
+                
+        try:
+                totalWait = 0
+                while (totalWait < timeLoad):
+                    time.sleep(1)
+                    totalWait = totalWait + 1
+                    print(totalWait)
+        finally:
+            print("Esperar: Carga finalizada")
 
 
+######################################################################################################
+######################################ALERT WINDOWS###################################################
 
-         
+    def alert_windows(self, accept="accept"):
+        
+        try:
+            wait=WebDriverWait(self.driver, 30)
+            wait.until(EC.alert_is_present(), print("Esperando alerta...")) #espera una alerta 
+            
+            alert= self.driver.switch_to.alert #vamos a la ventana
+            
+            print(alert.text)
+            
+            if accept.lower() == "accept":
+                alert.accept()
+                print("Click in accept")
+            else:
+                alert.dismiss()
+                print("Click in Dismiss")
+                
+        
+        except TimeoutException:
+            print("Alerta no presente")
+        except NoAlertPresentException:
+            print("Alerta no presente")
+        except NoSuchWindowException:
+            print("Alerta no presente")
+            
+            
+            
+            
+            

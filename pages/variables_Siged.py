@@ -16,10 +16,11 @@ class Variables():
   
     #FILTROS BANDEJA DE CONSULTA
     filtro_tramite = "//input[contains(@id,'mat-input-3')]"
-    
+    filtro_estado = "/html/body/app-root/div/div/app-layout/div[2]/app-bandeja-tramite/div/form/div[2]/div[1]/mat-form-field[4]/div/div[1]/div[3]"
+    opcion_filtro_estado = "//*[@id='mat-option-13']/span"
     boton_consultar = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/app-layout[1]/div[2]/app-bandeja-tramite[1]/div[1]/form[1]/div[3]/button[2]"
     
-    acciones = "/html/body/app-root/div/div/app-layout/div[2]/app-bandeja-tramite/div/div[3]/div[2]/table/tbody/tr[1]/td[16]/button/span[1]/mat-icon"
+    
     
     #INICIO DE TRAMITES
     nuevo_tramite = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/app-layout[1]/div[2]/app-bandeja-tramite[1]/div[1]/div[2]/button[1]/span[1]"
