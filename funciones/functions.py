@@ -16,7 +16,7 @@ from _pytest.python import Function
 from Estructura.funciones import inicializar
 from pip._vendor.distlib.locators import Locator
 from pickle import TRUE
-
+from selenium.webdriver.common.keys import Keys
 
 
 
@@ -128,13 +128,14 @@ class Functions(Inicializar):
 #############################SEND SPECIFIC KEYS###########################################
 
     def send_specific_keys(self, element, key):
+        
         if key == "Enter":
-            Functions.esperar_elemento(self, element).send_keys(key.ENTER)
+            Functions.xpath_elemento(self, element).send_keys(Keys.ENTER)
         if key == "Tab":
-            Functions.esperar_elemento(self, element).send_keys(key.TAB)
+            Functions.xpath_elemento(self, element).send_keys(Keys.TAB)
         if key == "Space":
-            Functions.esperar_elemento(self, element).send_keys(key.SPACE)
-        time.sleep(5)
+            Functions.xpath_elemento(self, element).send_keys(Keys.SPACE)
+        
             
 ##################################################################################
 ################################SEND KEYS#########################################            
@@ -213,7 +214,7 @@ class Functions(Inicializar):
 ####################################################################################################
 ########################################ESPERAR#####################################################
 
-    def esperar(self, timeLoad=8):
+    def esperar(self, timeLoad):
         print("Esperar: Inicia("+str(timeLoad)+")")
                 
         try:
