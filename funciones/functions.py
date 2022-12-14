@@ -233,7 +233,7 @@ class Functions(Inicializar):
     def alert_windows(self, accept="accept"):
         
         try:
-            wait=WebDriverWait(self.driver, 30)
+            wait= WebDriverWait(self.driver, 30)
             wait.until(EC.alert_is_present(), print("Esperando alerta...")) #espera una alerta 
             
             alert= self.driver.switch_to.alert #vamos a la ventana
@@ -255,7 +255,56 @@ class Functions(Inicializar):
         except NoSuchWindowException:
             print("Alerta no presente")
             
+    
+    #####################################################################################################
+    #####################################ASSERT Y VERIFICATION###########################################
+    #Assert: Es si esta o no el objeto y listo
+    #VERIFICACION: Esta el objeto y que hago
+    
+    def check_element(self, locator): #Devuelve true o false si esta o no el elemento
+        
+        try:
+            wait = WebDriverWait(self.driver, 15)
+            wait.until(EC.visibility_of_element_located((By.XPATH, locator)))
+            print(u"check element: Se visualizo el elemento" + locator)
+            return True
             
-            
+        except TimeoutException:
+            print(u"No se encontro el elemento" + locator)
+            return False
+        except NoSuchElementException:
+            print(u"No se encontro el elemento")
+            return False
+    
+    
+    def assert_text(self, locator, text): 
+        objtext = self.driver.find_element(By.XPATH, locator).text
+        wait = WebDriverWait(self.driver, 15)
+        wait.until(EC.presence_of_element_located((By.XPATH, locator)))
+    
+        print("El valor mostrado en: " + locator + " es: " + objtext + " y el esperado es: " + text)
+        assert text == objtext, "Los valores comparados no coinciden"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+          
             
             

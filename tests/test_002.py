@@ -14,7 +14,14 @@ class test_002(Selenium, unittest.TestCase):
         Selenium.send_keys(self, "//*[@id='user_id']", "sofiabrussa@gmail.com")
         Selenium.esperar(self, 2)
         Selenium.send_specific_keys(self, "//*[@id='user_id']", "Enter")
+        Selenium.assert_text(self, "/html/body/main/div/div[1]/div[2]/div/form/div[1]/div[2]/span[1]", "Completá este paso para continuar")
         
+        verificar = Selenium.check_element(self, "//*[@id='user_id']")
+        
+        if verificar:
+            Selenium.send_keys(self, "//*[@id='user_id']", "hola")
+            
+            
 
 
 
