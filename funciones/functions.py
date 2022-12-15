@@ -319,29 +319,8 @@ class Functions(Inicializar):
         assert variable_scenary in element_text, f"{variable_scenary} != {element_text}"
     
     
-###########################################################################################
-##############################CAPTURA DE PANTALLA##########################################
 
 
-    def crear_path(self):
-        def hora_actual():
-            hora = time.strftime("%H%M%S")
-            return hora
-        dia = time.strftime("%d-$m-%Y")
-        
-        GeneralPath = Inicializar.Path_Evidencias
-        DriverTest = Inicializar.nave
-        TestCase = self.__class__.__name__ #extrae el nombre de la clase
-        horaAct = hora_actual()
-        x = re.search("Context", TestCase)
-        if (x):
-            path = GeneralPath + "/" + dia + "/" + DriverTest + "/" + horaAct + "/"
-        else: 
-            path = GeneralPath + "/" + dia + "/" + TestCase + "/" + DriverTest + "/" + horaAct + "/"
-        
-        if not os.path.exists(path):
-            os.makedirs(path)
-        return path
 
 
     
