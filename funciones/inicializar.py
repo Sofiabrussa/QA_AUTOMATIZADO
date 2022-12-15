@@ -12,7 +12,7 @@ class Inicializar():
     enviroment = "Test" #en que ambiente se esta probando 
     
     # Directorio de evidencia 
-    path_evidencias = basedir + u"/data/capturas"
+    Path_Evidencias = basedir + u"/data/capturas"
     
     nave = u"Firefox"
     URL = "https://siged.test.cba.gov.ar/"
