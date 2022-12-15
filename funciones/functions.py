@@ -17,7 +17,8 @@ from Estructura.funciones import inicializar
 from pip._vendor.distlib.locators import Locator
 from pickle import TRUE
 from selenium.webdriver.common.keys import Keys
-
+import openpyxl
+Scenario = {}
 
 
 class Functions(Inicializar):    
@@ -100,16 +101,16 @@ class Functions(Inicializar):
         self.driver.switch_to.frame(iframe)
         
 
-###############################################################################
-########################SELECT BY TEXT#########################################
+##################################################################################
+########################SELECT BY TEXT############################################
 
     def select_by_text(self, xpath, text):
         get_xpath=Functions.select(self, xpath)
         get_xpath.select_by_visible_text(text)
 
 
-###############################################################################
-########################NEW_VENTANA###########################################
+##################################################################################
+########################NEW_VENTANA###############################################
 
     def new_ventana(self, ventana="new_ventana"):
         new_window = self.driver.current_window_handle
@@ -124,8 +125,8 @@ class Functions(Inicializar):
         Functions.page_has_loaded(self)
         
 
-#################################################################################
-#############################SEND SPECIFIC KEYS###########################################
+##################################################################################
+#############################SEND SPECIFIC KEYS###################################
 
     def send_specific_keys(self, element, key):
         
@@ -143,11 +144,21 @@ class Functions(Inicializar):
     def send_keys(self, element, text):
         self.driver.find_element(By.XPATH, element).send_keys(text)
     
-    
 ##################################################################################
-#################################MANEJO VENTANAS##################################
-  
+###########################GET TEXT###############################################   
     
+    def get_text(self, locator, MyTextElement = None):
+        if MyTextElement is not None:
+            self.locator = self.locator.format(MyTextElement)
+            print(self.locator)
+        elements = self.driver.find_element(By.XPATH, locator)
+        
+        print("get_text: " + locator)
+        print("Text Value: " + elements.text)
+        return elements.text   
+
+##################################################################################
+#################################MANEJO VENTANAS################################## 
     def page_has_loaded(self):
         driver = self.driver
         print("Checking if {} page is loaded".format(self.driver.current_url))#verifica url
@@ -163,18 +174,18 @@ class Functions(Inicializar):
             print("Volviendo a" + ventana + ":" + self.ventanas[ventana])
         
         else: #si la venatana no existe, la agrega al diccionario y hace salto 
-            time.sleep(10)
+            time.sleep(5)
             self.nwindows = len(self.driver.window_handles) - 1
             self.ventanas[ventana] = self.driver.window_handles[int(self.nwindows)]
-            self.driver.SWITCH_TO_WINDOW(self.ventanas[ventana])
+            self.driver.switch_to.window(self.ventanas[ventana])
             self.driver.maximize_window()
             print(self.ventanas)
             print("Estas en " + ventana + ":" + self.ventanas[ventana])
             Functions.page_has_loaded
     
     
-###################################################################################################
-###########################################JAVASCRIPT CLICK########################################
+#####################################################################################
+###########################################JAVASCRIPT CLICK##########################
 
     def js_clic(self, locator, MyTextElement=None):
         Functions.esperar_elemento(self, locator, MyTextElement)
@@ -194,8 +205,8 @@ class Functions(Inicializar):
             Functions.tearDown(self)
             
             
-####################################################################################################
-##########################################SCROLL####################################################
+######################################################################################
+##########################################SCROLL######################################
 
     def scroll_to(self, locator):
         
@@ -211,8 +222,8 @@ class Functions(Inicializar):
             Functions.tearDown(self)
     
 
-####################################################################################################
-########################################ESPERAR#####################################################
+######################################################################################
+########################################ESPERAR#######################################
 
     def esperar(self, timeLoad):
         print("Esperar: Inicia("+str(timeLoad)+")")
@@ -227,8 +238,8 @@ class Functions(Inicializar):
             print("Esperar: Carga finalizada")
 
 
-######################################################################################################
-######################################ALERT WINDOWS###################################################
+######################################################################################
+######################################ALERT WINDOWS###################################
 
     def alert_windows(self, accept="accept"):
         
@@ -256,8 +267,8 @@ class Functions(Inicializar):
             print("Alerta no presente")
             
     
-    #####################################################################################################
-    #####################################ASSERT Y VERIFICATION###########################################
+    #####################################################################################
+    #####################################ASSERT Y VERIFICATION###########################
     #Assert: Es si esta o no el objeto y listo
     #VERIFICACION: Esta el objeto y que hago
     
@@ -286,10 +297,25 @@ class Functions(Inicializar):
         assert text == objtext, "Los valores comparados no coinciden"
     
     
-    
-    
-    
-    
+##########################################################################################
+##################################DICCIONARIOS############################################
+
+    def save_variable_scenary(self, element, variable):
+        Scenario[variable] = Functions.get_text(self, element)
+        print(Scenario)
+        print("Se almaceno el valor: " + variable + " : " + Scenario[variable])
+            
+    def get_variable_scenary(self, variable):
+        self.variable = Scenario[variable]
+        print(f"get_variable_scenary: {self.variable}")
+        return self.variable
+        
+    def compare_with_variable(self, element, variable):
+        variable_scenary = str(Scenario[variable])
+        element_text = str(Functions.get_text(self, element))
+        _exist = (variable_scenary in element_text)
+        print("Verificando si: " + variable_scenary + " esta presente en: " + element_text)
+        assert variable_scenary in element_text, f"{variable_scenary} != {element_text}"
     
     
     
